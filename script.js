@@ -10,12 +10,11 @@ function calper(eobtain, etotal) {
     return formula;
 }
 
-percentBtn.addEventListener('click',() => {
-    let ouput_var =  calper(obtain.value, total.value);
+percentBtn.addEventListener('click', () => {
+    if (obtain.value == NaN && total.value == NaN) {
+        percentOutput.style.display = "none";
+    }
+    let ouput_var = calper(obtain.value, total.value);
     percentOutput.style.display = "flex";
     outputBox.innerHTML = Math.round(ouput_var);
-
-    if(obtain.value == NaN && total.value == NaN) {
-    percentOutput.style.display = "none";
-    }
 })
