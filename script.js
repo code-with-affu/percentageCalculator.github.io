@@ -13,8 +13,9 @@ function calper(eobtain, etotal) {
 percentBtn.addEventListener('click', () => {
     if (obtain.value == NaN && total.value == NaN) {
         percentOutput.style.display = "none";
+    } else {
+        let ouput_var = calper(obtain.value, total.value);
+        percentOutput.style.display = "flex";
+        outputBox.innerHTML = Math.round(ouput_var);
     }
-    let ouput_var = calper(obtain.value, total.value);
-    percentOutput.style.display = "flex";
-    outputBox.innerHTML = Math.round(ouput_var);
 })
