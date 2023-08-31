@@ -15,7 +15,7 @@ percentBtn.addEventListener('click', () => {
     percentOutput.style.display = "flex";
     outputBox.innerHTML = Math.round(ouput_var);
 
-    if (outputBox = NaN) {
+    if (outputBox.innerHTML = NaN) {
         percentOutput.style.display = "none";
     }
 })
