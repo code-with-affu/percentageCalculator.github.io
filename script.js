@@ -16,6 +16,6 @@ percentBtn.addEventListener('click', () => {
     } else {
         let ouput_var = calper(obtain.value, total.value);
         percentOutput.style.display = "flex";
-        outputBox.innerHTML = Math.round(ouput_var);
+        outputBox.innerHTML = parseFloat(ouput_var).toFixed(2);
     }
 })
